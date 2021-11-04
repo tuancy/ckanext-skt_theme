@@ -1,5 +1,3 @@
-[![Tests](https://github.com/rvizcarra-eclipse/ckanext-skt_theme/workflows/Tests/badge.svg?branch=main)](https://github.com/rvizcarra-eclipse/ckanext-skt_theme/actions)
-
 # ckanext-skt_theme
 
 **TODO:** Put a description of your extension here:  What does it do? What features does it have? Consider including some screenshots or embedding a video!
