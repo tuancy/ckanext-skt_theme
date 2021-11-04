@@ -1,5 +1,3 @@
-[![Tests](https://github.com/rvizcarra-eclipse/ckanext-skt_theme/workflows/Tests/badge.svg?branch=main)](https://github.com/rvizcarra-eclipse/ckanext-skt_theme/actions)
-
 # ckanext-skt_theme
 
 **TODO:** Put a description of your extension here:  What does it do? What features does it have? Consider including some screenshots or embedding a video!
@@ -43,7 +41,7 @@ To install ckanext-skt_theme:
 
 2. Clone the source and install it on the virtualenv
 
-    git clone https://github.com/rvizcarra-eclipse/ckanext-skt_theme.git
+    git clone https://github.com/skeenatrust/ckanext-skt_theme.git
     cd ckanext-skt_theme
     pip install -e .
 	pip install -r requirements.txt
