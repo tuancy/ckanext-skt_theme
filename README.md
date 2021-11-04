@@ -43,7 +43,7 @@ To install ckanext-skt_theme:
 
 2. Clone the source and install it on the virtualenv
 
-    git clone https://github.com/rvizcarra-eclipse/ckanext-skt_theme.git
+    git clone https://github.com/skeenatrust/ckanext-skt_theme.git
     cd ckanext-skt_theme
     pip install -e .
 	pip install -r requirements.txt
