@@ -1,0 +1,14 @@
+# skt_theme-js:
+#   filter: rjsmin
+#   output: ckanext-skt_theme/%(version)s-skt_theme.js
+#   contents:
+#     - js/skt_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
+# skt_theme-css:
+#   filter: cssrewrite
+#   output: ckanext-skt_theme/%(version)s-skt_theme.css
+#   contents:
+#     - css/skt_theme.css
