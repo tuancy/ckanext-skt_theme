@@ -704,10 +704,9 @@ August 2021 Updates
 }
 
 .breadcrumb > li {
-  display: inline-block;
-  font-size: 24px;
-  width: 24px;
-  vertical-align: -1px;
+  display: inline-block !important;
+  font-size: 20px !important;
+  vertical-align: -1px !important;
 }
 
 .toolbar {
