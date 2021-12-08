@@ -1,48 +1,124 @@
+{% set active_page = "index" %}
 {% ckan_extends %}
 
 {% block primary_content %}
-    <div id="banner">
-      <div class="wrapper">
-        <p><strong>Welcome to the Skeena Salmon Data Centre.</strong> explore our <a href="/dataset">datasets</a>, <a href="mailto:info@skeenatrust.ca">suggest a dataset</a>, and most importantly, <a href="mailto:info@skeenatrust.ca">provide us with your feedback!</a></p>
-      </div>
-    </div>
-
-    <div class="container" role="main">
-      <div class="wrapper">
-        {% snippet 'home/snippets/search.html' %}
-
-        <nav id="category-nav" role="navigation" aria-labelledby="category-title">
-          <h2 id="category-title">Search by Category</h2>
+    <section id="section-banner">
+      <div id="banner">
+        <video src="css/gfx/hero_1.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+  
+        <div class="top-logo">
+          <a href="/">Skeena Salmon <br> Data Centre</a>
+          <img id="by-index" src="css/gfx/by-big.png" width="25px" height="109px" alt="by">
+          <a href="https://www.skeenatrust.ca/"><img id="logo-index" src="css/gfx/skt-logo.png" width="172px" height="109px" alt="Skeena Knowledge Trust"></a>
+        </div>
+  
+        <div class="main-heading">
+          <p>Welcome to the <br> Skeena Salmon Data Centre</p>
+        </div>
+  
+        <div class="search-index">
+          {% snippet 'home/snippets/search.html' %}
+        </div>
+  
+        <div class="index-navi">
           <ul>
-            <li id="catnav-habitat"><a href="/group/habitat">Habitat</a></li>
-            <li id="catnav-population"><a href="/group/population">Population</a></li>
-            <li id="catnav-climatology"><a href="/group/climatechange">Climate Change</a></li>
-            <li id="catnav-water"><a href="/group/water">Water</a></li>
-            <li id="catnav-boundaries"><a href="group/boundaries">Boundaries</a></li>
-            <li id="catnav-ecology"><a href="/group/ecology">Vegetation/Ecology</a></li>
-            <li id="catnav-infrastructure"><a href="/group/infrastructure">Infrastructure</a></li>
-            <li id="catnav-landuse"><a href="/group/land-use-and-development">Land Use and Development</a></li>
+            <li><a href="/group">View Categories and Collections</a></li>
+            <li><a href="/dataset">View Datasets</a></li>
+            <li><a href="/user/login">Already have an account? Login</a></li>
           </ul>
-        </nav>
+        </div>
+      </div>
+    </section>
 
-{#
+    <section id="section-categories">
+      <ul>
+        <li><a id="cat-habitat" href="/group/habitat"><p>Habitat</p></a></li>
+        <li><a id="cat-population" href="/group/habitat"><p>Population</p></a></li>
+        <li><a id="cat-climate" href="/group/climatechange"><p>Climate Change</p></a></li>
+        <li><a id="cat-water" href="/group/water"><p>Water</p></a></li>
+        <li><a id="cat-landuse" href="/group/land-use-and-development"><p>Land Use and Development</p></a></li>
+        <li><a id="cat-gis" href="group/boundaries"><p>GIS Data</p></a></li>
+        <li><a id="cat-vegetation" href="/group/ecology"><p>Vegetation/Ecology</p></a></li>
+        <li><a id="cat-infrastructure" href="/group/infrastructure"><p>Infrastructure</p></a></li>
+      </ul>
+    </section>
+
+    <section id="section-about">
+      <div class="container">
         <div class="row">
-          <div class="span6">
-            <h3>Popular Datasets</h3>
-            <ul>
-            </ul>
+          <div class="col-md-6 col1">
+            <img src="css/gfx/salmon.jpeg" alt="Skeena Salmon Data Centre">
           </div>
-          <div class="span6">
-            <h3>Recently Updated</h3>
-            <ul>
-              <li>this</li>
-              <li>is</li>
-              <li>that</li>
-            </ul>
+          <div class="col-md-6 col2">
+            <p>
+              The Skeena Salmon Data Centre is a comprehensive, central repository for credible information related to wild Pacific salmonids in the Skeena watershed, including data on salmon populations, habitat, water quality, hydrology and climatology.
+            </p><br><br>
+            <a class="btn-blue" href="/about">Learn More About the Skeena Salmon Data Centre</a>
           </div>
         </div>
-#}
       </div>
-    </div>
+    </section>
 
+    <section id="section-stats">
+      <div class="overlay-stats"></div>
+
+      <div class="container">
+          <div class="row stats-content">
+            <div class="col-lg-4 col-6 text-center">
+              <!-- <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span> -->
+              <span class="dark-blue">100</span>
+              <p>Datasets</p>
+            </div>
+  
+            <div class="col-lg-4 col-6 text-center">
+              <!-- <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span> -->
+              <span class="dark-blue">100</span>
+              <p>Resources</p>
+            </div>
+  
+            <div class="col-lg-4 col-6 text-center">
+              <!-- <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span> -->
+              <span class="dark-blue">100</span>
+              <p>Organizations</p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="section-links">
+      <h1>Useful Links</h1>
+      <hr>
+        <div class="row links">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img class="card-img-top" src="css/gfx/pan-maps.png" alt="Skeena Maps Portal">
+              <div class="card-body">
+                <p class="card-text">Are you looking for some spatial data?</p>
+                <a class="btn-blue" href="https://maps.skeenasalmon.info/">View Skeena Maps Portal</a><br><br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img class="card-img-top" src="css/gfx/pan-help.png" alt="Skeena Salmon Data Centre Help Pages">
+              <div class="card-body">
+                <p class="card-text">New to the Skeena Salmon Data Centre?</p>
+                <a class="btn-blue" href="https://www.manula.com/manuals/skeena-knowledge-trust/skeena-knowledge-trust/1/en/topic/skeena-salmon-data-centre">View Help Pages</a><br><br>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img class="card-img-top" src="css/gfx/pan-skt.png" alt="Skeena Knowledge Trust">
+              <div class="card-body">
+                <p class="card-text">See how others are using the Data Centre</p>
+                <a class="btn-blue" href="https://www.skeenatrust.ca/">View Case Studies</a><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
 {% endblock %}

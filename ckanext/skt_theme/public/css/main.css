@@ -1,9 +1,15 @@
-
 /* =====+++++++++++++++++++==================================================
    Author: Phil Brienesse - Coffee Web Development
    Updated: Reine Vizcarra - Eclipse Geomatics Ltd.
    Date Updated: August 2021
-   ========================================================================== */
+========================================================================== */
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
 @font-face {
     font-family: 'fira_sansmedium';
     src: url('fonts/firasans-medium-webfont.eot');
@@ -90,6 +96,37 @@
 
 }
 
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, 
+address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, 
+tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, 
+output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;}
+     
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+ 
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;}
+     
+table {
+    border-collapse: collapse;
+    border-spacing: 0;}
+
 .wrapper {
   background: none;
   border: none;
@@ -106,8 +143,6 @@
 }
 
 body {
-  font: 14px/1.5 fira_sansregular, Helvetica, sans-serif;
-  color: #333;
   background: #fff !important;
   padding: 0;
 }
@@ -130,9 +165,168 @@ p {margin-top: 0;}
     border: none;
 }
 
+.btn-blue{
+  text-transform: uppercase;
+  font:12px Montserrat, Helvetica, sans-serif; 
+  font-weight: 500;
+  color: #375A85 !important;
+  border: 4px solid #375A85;
+  border-radius: 33px;
+  padding: 15px;
+  text-align: center;
+}
+
+.btn-blue:hover{
+  background-color: #375A85;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.btn-white{
+  text-transform: uppercase;
+  font:12px Montserrat, Helvetica, sans-serif; 
+  font-weight: 500;
+  color: #fff !important;
+  border: 4px solid #fff;
+  border-radius: 33px;
+  padding: 15px;
+  text-align: center;
+}
+
+.btn-white:hover{
+  background-color: #fff;
+  text-decoration: none;
+  color: #375A85 !important;
+}
+
+#content {padding: 65px 0 100px 0 !important;}
+
+.two-column .column {
+  width: 325px;
+  float: left;
+  padding-right: 250px;
+}
+
+.two-column .last {padding-right:0;}
+
+.two-column ul {padding-left: 14px;}
+
+#logo-wrappers.wrapper.clearfix::before,
+#logo-wrappers.wrapper.clearfix::after,
+.wrapper::before,
+.wrapper::after{
+ display: none !important;
+}
+
+
+
+.toolbar {
+  *zoom: 1;
+  position: relative;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.toolbar .breadcrumb .active a, .toolbar .breadcrumb a.active, .toolbar, .breadcrumb > li + li:before {
+  font: normal 20px/1.2 fira_sansregular, Helvetica, sans-serif !important;
+  color: #505050 !important;
+}
+
+.module-heading {
+  margin: 0 !important;
+  padding: 7px 25px !important;
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  background-color: #f6f6f6 !important;
+  border-top: 1px solid #dddddd !important;
+  border-bottom: 1px solid #dddddd !important;
+}
+
+.breadcrumb > li {
+  display: inline-block !important;
+  font-size: 20px !important;
+  vertical-align: -1px !important;
+}
+
+.homepage #content{
+  padding: 0px !important;
+}
+
+#banner{
+  margin-top: 0px !important;
+}
+
+.list-unstyled a{
+  font-weight: normal !important;
+  font: 14px fira_sansregular, Helvetica, sans-serif;
+}
+
+.wrapper {
+  border: none !important;
+  border-radius: none !important;
+  box-shadow: none !important;
+  min-height: 0px !important;
+  background-color: none !important;
+  position: relative !important;
+  background-color: transparent !important;
+}
+
+.label[data-format=kml],
+.label[data-format*=kml] {
+    background-color: #9855e0;
+}
+
+.label[data-format="shape file"],
+.label[data-format*="shape file"] {
+    background-color: #ed711f;
+}
+
+.label[data-format=geojson],
+.label[data-format*=geojson] {
+    background-color: #aaaaaa;
+}
+
+.fa-bars{
+  color: #fff;
+  background: #073748;
+  font-size: 20px !important;
+}
+/*--------------------------------------------------------------
+# Header & Login
+--------------------------------------------------------------*/
+
+.account-masthead.container{
+  width: 940px !important;
+}
+
+.account-masthead .account {
+    float: none !important;
+}
+
+.account-masthead .list-unstyled{
+  float: right !important;
+}
+
 .account-masthead {
   margin: 0;
   padding:0;
+}
+
+.masthead .navbar-collapse{
+  float: none !important;
+  padding: 0px !important ;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.masthead{
+  padding: 0px !important;
+}
+
+.main .container{
+  margin-right: auto !important;
+  margin-left: auto !important;
+  width: 940px !important;
 }
 
 .masthead {
@@ -186,6 +380,9 @@ p {margin-top: 0;}
     background-color: #41ade0 !important;
 }
 
+/*--------------------------------------------------------------
+# Main Navbar
+--------------------------------------------------------------*/
 .navbar .nav > li > a {
     padding: 21px 23px 14px !important;
     margin: 0 !important;
@@ -193,13 +390,65 @@ p {margin-top: 0;}
     line-height: 18px !important;
 }
 
+.navbar.nav li a{
+  padding: 21px 23px 14px !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  line-height: 18px !important;
+}
+
+#main-nav {
+  width: 100%;
+  background: #375a85;
+}
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  left: -25px;
+}
+
+#main-nav li {
+  float: left;
+  color: #448ec1;
+  font: normal 18px/1 fira_sansregular, Helvetica, sans-serif;
+}
+
+#main-nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: normal;
+  padding: 21px 23px 14px;
+  display: block;
+}
+
+#main-nav li a:hover {background: #41ade0;}
+
+.nav-pills > li + li {
+  margin-left: 0px !important;
+}
+
+.navbar{
+  border: none !important;
+}
+
+.navbar-toggle{
+  padding: 0px !important;
+}
+
+
+/*--------------------------------------------------------------
+# Search boxes
+--------------------------------------------------------------*/
 .homepage .module-search {
     padding: 0 !important;
-    margin: 0 0 100px 0 !important;
+    border-radius: 50px;
+    background: #fff;
+    color: #fff;
 }
 
 .homepage .module-search .module-content {
-    background: none !important;
+    background: transparent !important;
     padding: 0 !important;
 }
 
@@ -210,16 +459,60 @@ p {margin-top: 0;}
   text-transform: uppercase;
 }
 
-.site-footer {
-    background: #375a85 !important;
-    color: #fff !important;
+#search {margin-bottom: 100px !important;}
+
+#search legend {
+  font: normal 20px/1.2em fira_sansbold, Helvetica, sans-serif !important;
+  text-transform: uppercase !important;
+  color: #375a85 !important;
+  margin-bottom: 2em !important;
 }
 
-.site-footer a, .site-footer label, .site-footer p {
-    color: #fff !important;
-    font: 14px/1.5 fira_sansregular, Helvetica, sans-serif;
+#search input {
+  border: 1px solid #779fb8 !important;
+  border-radius: 10px !important;
+  width: 740px !important;
+  padding: 10px 20px !important;
+  font: normal 32px/1em fira_sanslight, Helvetica, sans-serif !important;
+  color: #51886f !important;
+  float: left !important;
 }
 
+#search button {
+  font: normal 24px/1em fira_sansbold, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  background: #51886f;
+  border-radius: 10px;
+  width: 166px;
+  padding: 14px 0;
+  margin-left: 8px;
+  float: left;
+  border: 1px solid #51886f;
+}
+
+.search-giant input {
+  background-color: transparent !important;
+  border: 3px solid #448EC1;
+  border-radius: 50px;
+  color: #555555;
+  width: 1060px !important;
+  height: auto !important;
+  font: 30px Montserrat, Helvetica, sans-serif !important;
+}
+
+.search-giant input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+
+/*--------------------------------------------------------------
+# Header logos
+--------------------------------------------------------------*/
 
 #logo-wrappers {
   position:relative;
@@ -274,235 +567,443 @@ p {margin-top: 0;}
   display: none;
 }
 
-#banner {
-  height: auto;
-  width: 100%;
-  background: url(gfx/banner.jpg) no-repeat center top;
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #223855;
+  padding: 0 0 25px 0;
+  color: #eee;
+  font-size: 14px;
 }
 
-#banner div.wrapper {
-  position: relative;
-  height: 459px;
+.details{
+  width: 280px;
 }
 
-#banner p {
-  position: absolute;
-  bottom: 70px;
-  font: normal 29px/1.2em fira_sanslight, Helvetica, sans-serif;
-  color: #fff;  
+.footer-logo{
+  font: bold 40px Merriweather, Helvetica, sans-serif !important;
+  color: #FFFFFF !important;
+  margin-bottom: 30px !important;
 }
 
-#banner p strong {
-  font-family: fira_sanssemibold, Helvetica, sans-serif;
-  font-weight: normal
+.footer-row{
+  max-width: 1500px;
+  position: relative !important;
+  margin: auto !important;
 }
 
-#banner p a {
-  text-decoration: underline;
+#footer .footer-top {
+  background: #375A85;
+  padding: 60px 0 30px 0;
+}
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-info h3 {
+  font-size: 26px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-family: "Montserrat", Helvetica;
+  font-weight: 700;
   color: #fff;
-  font-weight: normal;
 }
-
-#main-nav {
-  width: 100%;
-  background: #375a85;
+#footer .footer-top .footer-info img {
+  height: 40px;
+  margin-bottom: 10px;
 }
-#main-nav ul {
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Montserrat", Helvetica;
+  color: #fff;
+}
+#footer .footer-top .social-links a {
+  display: inline-block;
+  background: #222636;
+  color: #eee;
+  line-height: 1;
+  margin-right: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer .footer-top .social-links a i {
+  line-height: 0;
+  font-size: 16px;
+}
+#footer .footer-top .social-links a:hover {
+  background: #50bcff;
+  color: #fff;
+  text-decoration: none;
+}
+#footer .footer-top h4 {
+  font-size: 20px !important;
+  font-family: "Montserrat", Helvetica !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #223855;
+  width: 300px;
+}
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-links ul {
   list-style: none;
   padding: 0;
-  position: relative;
-  left: -25px;
+  margin: 0;
 }
-
-#main-nav li {
-  float: left;
-  color: #448ec1;
-  font: normal 18px/1 fira_sansregular, Helvetica, sans-serif;
+#footer .footer-top .footer-links ul i {
+  padding-right: 5px;
+  color: #fff;
+  font-size: 15px;
 }
-
-#main-nav li a {
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+}
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+#footer .footer-top .footer-links ul a {
+  color: #fff;
+  font: 15px Montserrat, Helvetica, sans-serif !important;
+}
+#footer .footer-top .footer-links ul a:hover {
+  color: #50bcff;
   text-decoration: none;
-  color: #fff;
-  font-weight: normal;
-  padding: 21px 23px 14px;
-  display: block;
+}
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+#footer .footer-top .footer-newsletter {
+  margin-bottom: 30px;
 }
 
-#main-nav li a:hover {background: #41ade0;}
-
-#content {padding: 65px 0 100px 0 !important;}
-
-#search {margin-bottom: 100px !important;}
-
-#search legend {
-  font: normal 20px/1.2em fira_sansbold, Helvetica, sans-serif !important;
-  text-transform: uppercase !important;
-  color: #375a85 !important;
-  margin-bottom: 2em !important;
-}
-
-#search input {
-  border: 1px solid #779fb8 !important;
-  border-radius: 10px !important;
-  width: 740px !important;
-  padding: 10px 20px !important;
-  font: normal 32px/1em fira_sanslight, Helvetica, sans-serif !important;
-  color: #51886f !important;
-  float: left !important;
-}
-
-#search button {
-  font: normal 24px/1em fira_sansbold, Helvetica, sans-serif;
-  text-transform: uppercase;
+#footer .copyright {
   text-align: center;
-  color: #fff;
-  background: #51886f;
-  border-radius: 10px;
-  width: 166px;
-  padding: 14px 0;
-  margin-left: 8px;
+  padding-top: 30px;
+}
+#footer .credits {
+  text-align: center;
+  font-size: 13px;
+  color: #ddd;
+}
+/*--------------------------------------------------------------
+# Homepage - Banner
+--------------------------------------------------------------*/
+#banner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#banner video{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  object-fit: cover;
+}
+
+.overlay{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #002D3B !important;
+  opacity: 43%;
+  z-index: 10;
+}
+
+.top-logo{
+  position:absolute !important;
+  z-index:20 !important;
+  top: 30px !important;
+  left: 30px !important;
+}
+
+.top-logo a{
+  font: bold 47px Merriweather, Helvetica, sans-serif !important;
+  color: #FFFFFF !important;
   float: left;
-  border: 1px solid #51886f;
+  text-decoration: none !important;
 }
 
-#category-nav ul {
-    margin: 40px 0 80px 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#by-index, #logo-index{
+  float: left;
+  margin-left: 50px !important;
 }
 
-#category-nav li {
-    margin-bottom: 40px;
-    flex-basis: 200px;
-    list-style: none;
-}
-
-#category-nav li a {
-  width: 121px;
-  display: block;
-  background: url(gfx/symbols.png) no-repeat left top;
-  padding-top: 135px;
-  text-align: center;
-  font: normal 12px/1em fira_sanssemibold, Helvetica, sans-serif;
-  color: #666;
+.main-heading{
+  position: absolute;
+  z-index: 20;
   margin: auto;
+  margin-top: 130px;
 }
 
-#category-nav li a {text-decoration: none; color: #666;}
-
-li#catnav-population a {background-position: 0 -200px;}
-li#catnav-climatology a {background-position: 0 -400px;}
-li#catnav-water a {background-position: 0 -600px;}
-li#catnav-boundaries a {background-position: 0 -1000px;}
-li#catnav-ecology a {background-position: 0 -800px;}
-li#catnav-infrastructure a {background-position: 0 -1200px;}
-li#catnav-landuse a {background-position: 0 -1400px;}
-
-.two-column .column {
-  width: 325px;
-  float: left;
-  padding-right: 250px;
+.main-heading p{
+  font: 700 80px Merriweather, Helvetica, sans-serif !important;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 200px;
 }
 
-.two-column .last {padding-right:0;}
+.search-index{
+  position: absolute;
+  z-index: 20;
+  margin-top: 350px;
+}
 
-.two-column ul {padding-left: 14px;}
+.index-navi{
+  position: absolute;
+  z-index: 20;
+  margin-top: 600px;
+  text-align: center;
+}
 
-#footer {background: #375a85;}
+.index-navi li{
+  /* float:left; */
+  display: inline-block;
+  list-style: none;
+  text-transform: uppercase;
+  font:17px Montserrat, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #FFFFFF !important;
+  margin: 0 3px 10px 3px;
+  transition: all ease-in-out 0.3s;
+  padding: 8px 20px 10px 20px;
+}
 
-#footer p {
-  padding: 15px 0;
-  font: normal 14px/1 fira_sansregular, Helvetica, sans-serif;
+.index-navi li a{
+  color: #fff !important;
+  border: 4px solid #50bcff;
+  border-radius: 33px;
+  padding: 15px;
+  text-align: center;
+}
+
+.index-navi li a:hover{
+  background-color: #50bcff;
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Homepage - Categories Section
+--------------------------------------------------------------*/
+#section-categories{
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+
+#section-categories li{
+  float:left;
+  list-style: none;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+
+#section-categories li a{
+  background-size: contain;
+  width: 200px;
+  height: 150px;
+  display: inline-block;
+}
+
+#section-categories p{
+  margin-top: 160px;
+  list-style: none;
+  text-transform: uppercase;
+  font:12px Montserrat, Helvetica, sans-serif;
+  font-weight: 500;
+  color: #375A85 !important;
+}
+
+#section-categories a:hover{
+  text-decoration: none;
+  font-weight: 600 !important;
+}
+
+#cat-habitat{background: url("gfx/habitat.png") no-repeat center;}
+#cat-population{background: url("gfx/population.png") no-repeat center;}
+#cat-climate{background: url("gfx/climate.png") no-repeat center;}
+#cat-water{background: url("gfx/water.png") no-repeat center;}
+#cat-gis{background: url("gfx/gis.png") no-repeat center;}
+#cat-vegetation{background: url("gfx/vegetation.png") no-repeat center;}
+#cat-infrastructure{background: url("gfx/infrastructure.png") no-repeat center;}
+#cat-landuse{background: url("gfx/landuse.png") no-repeat center;}
+
+#section-categories li a:hover{
+  list-style: none;
+  background-size: contain;
+  width: 200px;
+  height: 150px;
+}
+
+#cat-habitat:hover{background: url("gfx/habitat-hover.png") no-repeat center;}
+#cat-population:hover{background: url("gfx/population-hover.png") no-repeat center;}
+#cat-climate:hover{background: url("gfx/climate-hover.png") no-repeat center;}
+#cat-water:hover{background: url("gfx/water-hover.png") no-repeat center;}
+#cat-gis:hover{background: url("gfx/gis-hover.png") no-repeat center;}
+#cat-vegetation:hover{background: url("gfx/vegetation-hover.png") no-repeat center;}
+#cat-infrastructure:hover{background: url("gfx/infrastructure-hover.png") no-repeat center;}
+#cat-landuse:hover{background: url("gfx/landuse-hover.png") no-repeat center;}
+
+/*--------------------------------------------------------------
+# Homepage - About Section
+--------------------------------------------------------------*/
+#section-about{
+  margin: 0 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+#section-about img{
+  width: 650px;
+  height: auto;
+  border-radius: 30px;
+}
+
+.col1{
+  display: flex;
+  justify-content: right;
+}
+
+.col2 p{
+  font:30px Montserrat, Helvetica, sans-serif; 
+  font-weight: 300;
+  color: #395B83;
+  width: 620px;
+  margin-top: 45px;
+}
+
+
+/*--------------------------------------------------------------
+# Homepage - Stats Section
+--------------------------------------------------------------*/
+#section-stats{
+  background-image: url("gfx/seymour-secchi.jpg");
+  height: 30vh !important;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
   color: #fff;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
-.site-footer .row {
-  margin: 0 4%;
+.overlay-stats{
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: #000 !important;
+  opacity: 43%;
+  z-index: 10;
 }
 
-@media only screen and (min-width: 768px) {
-
-  #logo-wrappers {
-    position:relative;
-    margin-top: 45px;
-  }
-
-  #data-centre-logo {
-    font: normal 32px/1.2em fira_sanssemibold, Helvetica, sans-serif;
-    float: left;
-    text-align: left;
-    margin-bottom: .7em;
-  }
-
-  #data-centre-logo:after {display:none;}
-
-  #data-centre-logo br {display: block;}
-
-  #by {
-    float:left;
-    margin: 0 20px 0 30px;
-    display: block;
-  }
-
-  #logo-box {
-    float: left;
-    position: relative;
-    top: 43px;
-  }
-
-  #logo-box p {
-    margin: 0;
-    text-align: left
-  }
-
-  #logo-box p span {
-    font: normal 14px/1em fira_sansmedium, Helvetica, sans-serif;
-    display: block;
-    padding-left: 18px;
-  }
-
-  #logo-box img {
-    position: absolute;
-    bottom: 14px;
-    left: 63px;
-    width: 50px;
-    height: 56px;
-    display: block;
-  }
-
+.dark-blue{
+  font:100px Merriweather, Helvetica, sans-serif !important; 
+  font-weight: 700 !important;
+  color: #50bcff !important;
 }
 
-.label[data-format=kml],
-.label[data-format*=kml] {
-    background-color: #9855e0;
+.stats-content{
+  z-index: 20;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
-.label[data-format="shape file"],
-.label[data-format*="shape file"] {
-    background-color: #ed711f;
+.stats-content p{
+  text-transform: uppercase;
+  font:30px Montserrat, Helvetica, sans-serif; 
+  font-weight: 500;
+  text-align: center;
 }
 
-.label[data-format=geojson],
-.label[data-format*=geojson] {
-    background-color: #aaaaaa;
+/*--------------------------------------------------------------
+# Homepage - Helpful Links Section
+--------------------------------------------------------------*/
+#section-links {
+  padding: 60px 0;
 }
 
-@media only screen and (min-width: 979px) {
-  .nav-wrapper .wrapper {
-    margin: 0 4%;
-    width: auto;
-    left: -23px;
-  }
-
+.links{
+  max-width: 1700px;
+  position: relative !important;
+  margin: auto !important;
+  text-align: center;
 }
 
-@media only screen and (min-width: 1036px) {
-  .wrapper, .site-footer .row, .nav-wrapper .wrapper {
-    width: 960px;
-    margin: 0 auto;
-  }
+
+#section-links .card {
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
+}
+#section-links .card:hover {
+  box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
+}
+#section-links hr {
+  border-top: 5px solid #375A85;
+  width: 50px;
+  margin-bottom: 50px;
+}
+
+#section-links h1{
+  font: 700 60px Montserrat, Helvetica, sans-serif !important;
+  color: #375A85 !important;
+  text-align: center;
+  margin: 0 50px 50px 0;
+  text-transform: uppercase;
+}
+
+.card-body {
+  flex: 1 1 auto; 
+  padding: 3rem 3rem;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.card-text{
+  font:30px Montserrat, Helvetica, sans-serif;
+  margin: 20px 0 40px 0 !important;
+  color: #375A85 !important;
 }
 
 /* ==========================================================================
@@ -540,8 +1041,8 @@ li#catnav-landuse a {background-position: 0 -1400px;}
 }
 
 /* ==========================================================================
-   Print styles
-   ========================================================================== */
+# Media Queries
+ ========================================================================== */
 
 @media print {
   *,
@@ -603,130 +1104,235 @@ li#catnav-landuse a {background-position: 0 -1400px;}
   }
 }
 
-/*================================= 
-August 2021 Updates
-==================================*/
-#logo-wrappers.wrapper.clearfix::before,
-#logo-wrappers.wrapper.clearfix::after,
-.wrapper::before,
-.wrapper::after{
- display: none !important;
+@media only screen and (min-width: 1200px) {
+  .wrapper, .site-footer .row, .nav-wrapper .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
 }
 
-.wrapper {
-  border: none !important;
-  border-radius: none !important;
-  box-shadow: none !important;
-  min-height: 0px !important;
-  background-color: none !important;
-  position: relative !important;
-  background-color: transparent !important;
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+  .navbar .btn-navbar {
+      display: block;
+  }
+
+  .main .container{
+    width: 100%;
+  }
 }
 
-.masthead .navbar-collapse{
-  float: none !important;
-  padding: 0px !important ;
-  margin-left: auto !important;
-  margin-right: auto !important;
+
+@media only screen and (min-width: 768px){
+
+  #logo-wrappers {
+    position:relative;
+    margin-top: 45px;
+  }
+
+  #data-centre-logo {
+    font: normal 32px/1.2em fira_sanssemibold, Helvetica, sans-serif;
+    float: left;
+    text-align: left;
+    margin-bottom: .7em;
+  }
+
+  #data-centre-logo:after {display:none;}
+
+  #data-centre-logo br {display: block;}
+
+  #by {
+    float:left;
+    margin: 0 20px 0 30px;
+    display: block;
+  }
+
+  #logo-box {
+    float: left;
+    position: relative;
+    top: 43px;
+  }
+
+  #logo-box p {
+    margin: 0;
+    text-align: left
+  }
+
+  #logo-box p span {
+    font: normal 14px/1em fira_sansmedium, Helvetica, sans-serif;
+    display: block;
+    padding-left: 18px;
+  }
+
+  #logo-box img {
+    position: absolute;
+    bottom: 14px;
+    left: 63px;
+    width: 50px;
+    height: 56px;
+    display: block;
+  }
+
+  .main .container{
+    width: 100%;
+  }
 }
 
-.masthead{
-  padding: 0px !important;
-}
-
-.main .container{
-  margin-right: auto !important;
-  margin-left: auto !important;
-  width: 940px !important;
-}
-
-.navbar.nav li a{
-  padding: 21px 23px 14px !important;
-  margin: 0 !important;
-  border-radius: 0 !important;
-  line-height: 18px !important;
-}
-
-@media only screen and (min-width: 490px){
+@media only screen and (min-width: 490px) and (max-width: 767px){
   #data-centre-logo {
       font: normal 32px/1.2em fira_sanssemibold, Helvetica, sans-serif;
       float: left;
       text-align: left;
       margin-bottom: .7em;
   }
+
+  .main .container{
+    width: 100%;
+  }
+
+  .main-heading p{
+    font: 700 42px Merriweather, Helvetica, sans-serif;
+  }
 }
 
-.account-masthead.container{
-  width: 940px !important;
+@media only screen and (max-width: 489px){
+  .main .container{
+    width: 80% !important;
+  }
+
+  .container-fluid{
+    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  #footer .footer-top h4{
+    width: 200px;
+  }
+
+  .navbar-toggle{
+    padding: 0px !important;
+    margin-right: 10px !important;
+  }
+
+  .masthead .container{
+    padding: 0px !important;
+  }
+
+  .top-logo a{
+    font: bold 15px Merriweather, Helvetica, sans-serif !important;
+  }
+
+  #by-index{
+    width: 10px;
+    height: auto;
+    margin-left: 20px !important;
+  }
+
+  #logo-index{
+    width: 55px;
+    height: auto;
+    margin-left: 20px !important;
+  }
+
+  .main-heading p{
+    font: 700 30px Merriweather, Helvetica, sans-serif !important;
+  }
+
+  .search-giant input{
+    width: 250px !important;
+    font: 11px Montserrat, Helvetica, sans-serif !important;
+  }
+
+  #section-about img{
+    width: 300px;
+  }
+
+  .col1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .col2 p{
+    font: 20px Montserrat, Helvetica, sans-serif !important;
+    width: 300px;
+    margin: 0px auto;
+  }
+
+  .dark-blue{
+    font: 30px Merriweather, Helvetica, sans-serif !important;
+  }
+
+  .stats-content p{
+    font: 11px Montserrat, Helvetica, sans-serif;
+  }
+
+  .btn-blue{
+    font: 8px Montserrat, Helvetica, sans-serif !important;
+    border: 2px solid #375A85 !important;
+  }
+
+  .index-navi li a {
+    color: #fff !important;
+    border: 2px solid #50bcff !important;
+    padding: 5px !important;
+  }
+
+  .index-navi li{
+    font: 10px Montserrat, Helvetica, sans-serif !important;
+  }
+
+  .index-navi ul{
+    padding: 0px;
+  }
+
+  .search-index{
+    margin-top: 140px;
+  }
+
+  .index-navi{
+    margin-top: 330px;
+  }
+
+  #section-categories{
+    display: flex;
+    justify-content: center;
+  }
+
+  #section-categories li a{
+    width: 125px !important;
+  }
+
+  #cat-gis{
+    margin-top: 15px !important;
+  }
+
+  #cat-vegetation{
+    margin-top: -14px !important;
+  }
+
+  #cat-infrastructure{
+    margin-top: -14px !important;
+  }
+
+  #section-links h1{
+    font: 700 30px Montserrat, Helvetica, sans-serif !important;
+  }
+
+  .card-text{
+    font: 20px Montserrat, Helvetica, sans-serif !important;
+  }
 }
 
-.account-masthead .account {
-    float: none !important;
-}
+/* SAFARI specific media queries */
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    .search-index{
+      margin-top: 200px;
+    }
 
-.account-masthead .list-unstyled{
-  float: right !important;
-}
-
-.list-unstyled a{
-  font-weight: normal !important;
-  font: 14px fira_sansregular, Helvetica, sans-serif;
-}
-
-.homepage #content{
-  padding: 0px !important;
-}
-
-#banner{
-  margin-top: 0px !important;
-}
-
-.navbar{
-  border: none !important;
-}
-
-.search-giant input {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  color: #555555;
-}
-
-.search-giant input:focus {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
-
-.nav-pills > li + li {
-  margin-left: 0px !important;
-}
-
-.breadcrumb > li {
-  display: inline-block !important;
-  font-size: 20px !important;
-  vertical-align: -1px !important;
-}
-
-.toolbar {
-  *zoom: 1;
-  position: relative;
-  margin-bottom: 10px;
-  padding: 5px 0;
-}
-
-.toolbar .breadcrumb .active a, .toolbar .breadcrumb a.active, .toolbar, .breadcrumb > li + li:before {
-  font: normal 20px/1.2 fira_sansregular, Helvetica, sans-serif !important;
-  color: #505050 !important;
-}
-
-.module-heading {
-  margin: 0 !important;
-  padding: 7px 25px !important;
-  font-size: 14px !important;
-  line-height: 1.3 !important;
-  background-color: #f6f6f6 !important;
-  border-top: 1px solid #dddddd !important;
-  border-bottom: 1px solid #dddddd !important;
+    .index-navi{
+      margin-top: 300px;
+    }
+  }
 }
