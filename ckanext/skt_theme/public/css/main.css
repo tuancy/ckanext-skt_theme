@@ -150,7 +150,9 @@ body {
 body a {color: #448ec1;}
 
 h1 {font: normal 32px/1.2em fira_san-semibold, Helvetica, sans-serif !important; color: #51886f !important;}
-h2 {font: normal 20px/1.2 fira_sansbold, Helvetica, sans-serif !important; color: #375a85 !important; text-transform: uppercase !important;}
+/* h2 duoc sua de khong bi loi chu tieng viet co dau */
+/* h2 {font: normal 20px/1.2 fira_sansbold, Helvetica, sans-serif !important; color: #375a85 !important; text-transform: uppercase !important;} */
+h2 {font: normal 20px/1.2 fira_sansbold, Helvetica, sans-serif; color: #375a85 !important; text-transform: uppercase !important;}
 h3 {font: normal 20px/1.2 fira_sanssemibold, Helvetica, sans-serif !important; color: #375a85 !important; text-transform: uppercase !important;}
 h4 {font: normal 16px/1.2 fira_sansmedium, Helvetica, sans-serif !important; color: #375a85 !important;}
 
